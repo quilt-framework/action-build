@@ -15,3 +15,20 @@ jobs:
       - uses: quilt-framework/action-prepare@v1
       - uses: quilt-framework/action-build@v2
 ```
+
+You can pass custom arguments to the build command by providing an `arguments` input to this GitHub action:
+
+```yml
+name: CI
+on: [push]
+jobs:
+  build:
+    name: Build 🏗
+    runs-on: ubuntu-latest
+    steps:
+      - uses: quilt-framework/action-prepare@v1
+      - uses: quilt-framework/action-build@v2
+        with:
+          arguments: '--only-project package:*'
+          
+```
