@@ -30,5 +30,4 @@ jobs:
       - uses: quilt-framework/action-build@v2
         with:
           arguments: '--only-project package:*'
-          
 ```
