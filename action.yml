@@ -2,13 +2,13 @@ name: Build
 description: "Runs Quilt’s build command on your workspace"
 inputs:
   arguments:
-    description: "Additional arguments to pass to sewing-kit’s build command"
+    description: "Additional arguments to pass to Quilt’s build command"
     required: false
     default: ""
   command:
-    description: "The command to run to start sewing-kit’s build"
+    description: "The command to run to start Quilt’s build"
     required: false
-    default: "node_modules/.bin/sewing-kit build"
+    default: "node_modules/.bin/quilt build"
 runs:
   using: "composite"
   steps:
